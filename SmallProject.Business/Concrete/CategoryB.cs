@@ -1,5 +1,7 @@
 ﻿using SmallProject.Business.Abstract;
 using SmallProject.DataAccess;
+using SmallProject.UnitOfWork.Abstract;
+using SmallProject.UnitOfWork.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +12,16 @@ namespace SmallProject.Business.Concrete
 {
     public class CategoryB : ICategoryB
     {
+        private IBaseUow Uow;
+        private IBaseUow uow
+        {  
+            get {
+                if (Uow == null) Uow = new BaseUow();
+                 return Uow; }
+        }
         public void Add(CategoryDto dto)
         {
-            throw new NotImplementedException();
+          
         }
 
         public void Edit(CategoryDto dto)

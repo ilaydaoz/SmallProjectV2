@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SmallProject.DataAccess\SmallProject.DataAccess.csproj" />
+    <ProjectReference Include="..\SmallProject.UnitOfWork\SmallProject.UnitOfWork.csproj" />
   </ItemGroup>
 
 </Project>

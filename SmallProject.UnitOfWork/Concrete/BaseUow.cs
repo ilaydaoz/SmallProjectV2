@@ -28,7 +28,7 @@ namespace SmallProject.UnitOfWork.Concrete
 
         public async Task<int> SaveChanges()
         {
-          return
+          return await dbContext.SaveChangesAsync();
         }
     }
     
